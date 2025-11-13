@@ -1,0 +1,65 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Create Release
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "release"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  create-release:
+    runs-on: ubuntu-latest
+    env:
+      CI: false
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Build
+        run: |
+          bunx @marp-team/marp-cli@latest --allow-local-files slides.md -o slides.pdf
+          bunx @marp-team/marp-cli@latest --allow-local-files slides.md -o slides.pptx
+      - name: Set release tag
+        id: tag_sha
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+      - name: Create release
+        uses: actions/create-release@v1
+        id: create_release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag_sha.outputs.sha_short }}
+          release_name: Assets for ${{ steps.tag_sha.outputs.sha_short }}
+          body: |
+            No release notes.
+          draft: false
+          prerelease: false
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: slides.pdf
+          asset_name: slides.pdf
+          asset_content_type: application/pdf
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: slides.pptx
+          asset_name: slides.pptx
+          asset_content_type: application/vnd.openxmlformats-officedocument.presentationml.presentation
