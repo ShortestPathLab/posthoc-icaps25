@@ -26,14 +26,7 @@ footer: "Posthoc @ ICAPS 2025"
     }
 </style>
 
-# **Celebrating visualisation in search and planning**
-
-<!-- For those from overseas
-- Hope you're enjoying Australia
-For those from Australia but not from Melbourne
-- Hope you're enjoying Melbourne
-For those who are from Melbourne
-- Hope you're um enjoying here -->
+# **Posthoc @ ICAPS 2025**
 
 ---
 
@@ -48,7 +41,7 @@ https://pathfinding.ai/posthoc-icaps25/
 1. Set the scene (5 minutes)
 2. The Posthoc project (5 minutes)
 3. Live demos (5 minutes)
-4. The future of visualisation (5 minutes)
+4. What's next (5 minutes)
 
 ---
 
@@ -100,13 +93,13 @@ MAES [Link](https://icaps22.icaps-conference.org/demos/ICAPS_2022_paper_384.pdf)
 
 (Andreason et al., 2022)
 
-![bg right:70%](image-3.png)
+![bg right:70% 100%](9fbcf0e40c60f68ea45109bd3065a03c.png)
 
 ---
 
-# How about using visualisations for _my_ problem?
+# How about visualisations for _my_ algorithm?
 
-Search problems come in all shapes and sizes.
+Search problems and algorithms come in all shapes and sizes.
 
 - Various domains
 - Various algorithms and procedures
@@ -138,7 +131,7 @@ PlanViz [Link](https://github.com/MAPF-Competition/PlanViz)
 
 ---
 
-# So how do we incorporate visualisation into everyday problem solving?
+# What can we do incorporate visualisation into everyday problem solving?
 
 - Framework that makes a minimal set of powerful assumptions
 - Way to record program behaviour
@@ -152,6 +145,14 @@ Also
 
 # The Posthoc project
 
+![bg right:60%](image-21.png)
+
+<br/>
+
+https://posthoc.pathdinding.ai/
+
+![width:140px](image-22.png)
+
 ---
 
 # Setting expectations
@@ -159,16 +160,18 @@ Also
 - Simple but effective visualisations
 - Not trying to replace any tools
 
----
+<br/>
 
 # Two parts
 
-- Search trace
+- Search trace format
 - Posthoc visualiser
+
+![bg right:60%](image-17.png)
 
 ---
 
-# Search trace
+# 1. Search trace
 
 - Textual recording of your algorithmic procedure
 - Optional description of the visualisation model
@@ -192,14 +195,17 @@ Why YAML?
 
 ---
 
-# Posthoc visualiser
+# 2. Posthoc visualiser
 
 - Separate from the search trace
-- Replay and interactive inspection
 - Toolbox/visualisation suite for search traces
+- Replay and interactive inspection
 - Tree and graph visualisations
 - Custom visualisations
-- Breakpoints for debugging
+- Breakpoints for debugging,
+- etc.
+
+![bg right:40%](image-16.png)
 
 ---
 
@@ -216,9 +222,16 @@ Why YAML?
 Follow along:
 https://pathfinding.ai/news/using-posthoc-with-piglet/
 
+Posthoc:
+https://posthoc.pathfinding.ai/
+
 ---
 
 # What's next
+
+Making search visualisations accessible
+
+![bg right:50%](image-18.png)
 
 ---
 
@@ -256,7 +269,5 @@ https://pathfinding.ai/news/using-posthoc-with-piglet/
 - Star us on GitHub: https://github.com/shortestpathlab/posthoc-app
 
 ![bg right:40% 80%](image-12.png)
-
----
 
 ---
