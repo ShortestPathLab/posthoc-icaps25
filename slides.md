@@ -149,7 +149,7 @@ Also
 
 <br/>
 
-https://posthoc.pathdinding.ai/
+https://posthoc.pathfinding.ai/
 
 ![width:140px](image-22.png)
 
