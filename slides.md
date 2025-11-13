@@ -30,18 +30,18 @@ footer: "Posthoc @ ICAPS 2025"
 
 ---
 
+1. Set the scene (5 minutes)
+2. The Posthoc project (5 minutes)
+3. Live demos (5 minutes)
+4. What's next (5 minutes)
+
+---
+
 ![bg right:50% 50%](image-8.png)
 
 Find the slides here
 
 https://pathfinding.ai/posthoc-icaps25/
-
----
-
-1. Set the scene (5 minutes)
-2. The Posthoc project (5 minutes)
-3. Live demos (5 minutes)
-4. What's next (5 minutes)
 
 ---
 
